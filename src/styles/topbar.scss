@@ -1,0 +1,75 @@
+#app {
+  .topbar-container {
+    background-color: $topbarBg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+  }
+  .topbar-left {
+    color: $subMenuActiveText;
+    display: flex;
+    align-items: center;
+    & .svg-icon {
+      margin-right: 16px;
+    }
+    & .text {
+      font-weight: bold;
+    }
+  }
+  .right-menu {
+    float: right;
+    display: flex;
+    align-items: center;
+    //height: 100%;
+    line-height:normal;
+
+    &:focus {
+      outline: none;
+    }
+
+    .right-menu-item {
+      margin-right: 16px;
+      display: inline-block;
+      padding: 0 8px;
+      height: 100%;
+      font-size: 18px;
+      color: #fff;
+      vertical-align: text-bottom;
+
+      &.hover-effect {
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.025);
+        }
+      }
+    }
+
+    .avatar-container {
+      margin-right: 30px;
+
+      .avatar-wrapper {
+        margin-top: 5px;
+        position: relative;
+
+        .user-avatar {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+        }
+
+        .el-icon-caret-bottom {
+          cursor: pointer;
+          position: absolute;
+          right: -20px;
+          top: 25px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
